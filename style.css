@@ -1,0 +1,320 @@
+/* Global Styles */
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background: #222121;
+  color: #fff;
+  min-height: 50px;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 2px 4px;
+  width: 100vw;
+}
+header img {
+  height: 40px;
+  width: 80px;
+  margin-left: 20px;
+}
+
+header ul {
+  list-style-type: none;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  margin-left: 40px;
+}
+
+header ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header ul li a:hover {
+  color: yellow;
+}
+
+/* Hero Section */
+#hero {
+  background: url("gym-background.jpg") no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero-text {
+  max-width: 600px;
+  margin: auto;
+}
+
+.hero-text h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background: #ffa500;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+}
+
+.btn:hover {
+  background: #ce5310;
+}
+
+/* Features Section */
+#features {
+  padding: 100px 0;
+  background-color: #000000;
+  color: #fff;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.feature {
+  background: #a59595;
+  padding: 20px;
+  border-radius: 5px;
+  color: #a72525;
+}
+
+.feature h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Testimonials Section */
+#testimonials {
+  padding: 100px 0;
+  background-color: #111010;
+  color: #fff;
+}
+
+.testimonial-slider {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.testimonial {
+  flex: 0 0 400px;
+  padding: 20px;
+  margin-right: 20px;
+  background: #b79c9c;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.testimonial img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.testimonial p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #7e3030;
+}
+
+.testimonial h6 {
+  font-style: normal;
+  font-size: 1em;
+  color: #2f2d2d;
+}
+
+/* Download Section */
+#download {
+  background: #201f1f;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.download-buttons {
+  margin-top: 30px;
+}
+
+.app-store-btn,
+.play-store-btn {
+  display: inline-block;
+  background: #ddd;
+  color: #000;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  margin-right: 20px;
+}
+
+.app-store-btn:hover,
+.play-store-btn:hover {
+  background: #546547;
+  color: #ffffff;
+}
+
+/* Footer Section */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  padding: 10px;
+}
+
+.footer-left p {
+  margin: 5px 0;
+}
+
+.social-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links li {
+  margin: 0 10px;
+}
+
+.social-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.social-links li a:hover {
+  color: yellow;
+}
+
+.copyright {
+  margin-top: 10px;
+  flex-basis: 100%;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  header img {
+    height: 40px;
+  }
+
+  header ul {
+    float: none;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  header ul li {
+    display: block;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  #hero {
+    padding: 80px 0;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5em;
+  }
+
+  .hero-text p {
+    font-size: 1.2em;
+  }
+
+  .testimonial-slider {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .testimonial {
+    flex: 0 0 calc(50% - 20px);
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2em;
+  }
+
+  .hero-text p {
+    font-size: 1em;
+  }
+
+  .feature {
+    padding: 15px;
+  }
+
+  .testimonial {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+
+  .app-store-btn,
+  .play-store-btn {
+    padding: 12px 25px;
+    font-size: 1em;
+  }
+}
