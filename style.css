@@ -6,7 +6,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -253,20 +255,26 @@ footer .container {
   .container {
     width: 90%;
   }
+  header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 
   header img {
     height: 40px;
   }
 
   header ul {
-    float: none;
-    text-align: center;
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   header ul li {
     display: block;
-    margin-left: 0;
+    margin-left: 10px;
     margin-bottom: 10px;
   }
 
@@ -285,12 +293,20 @@ footer .container {
   .testimonial-slider {
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: column;
   }
 
   .testimonial {
     flex: 0 0 calc(50% - 20px);
-    margin-right: 0;
+    flex-direction: column;
+    flex-wrap: wrap;
     margin-bottom: 20px;
+  }
+  .app-store-btn,
+  .play-store-btn {
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 1em;
   }
 }
 
@@ -308,13 +324,15 @@ footer .container {
   }
 
   .testimonial {
-    flex: 0 0 100%;
     margin-bottom: 20px;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 
   .app-store-btn,
   .play-store-btn {
     padding: 12px 25px;
+    margin: 10px;
     font-size: 1em;
   }
 }
